@@ -6,12 +6,16 @@
 //
 
 import SwiftUI
+import SwiftData
+
 
 @main
 struct Quote_GeneratorApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LoginView()
         }
+        .modelContainer(for: User.self)
     }
+    
 }

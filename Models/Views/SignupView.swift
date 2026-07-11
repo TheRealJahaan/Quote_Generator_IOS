@@ -1,3 +1,4 @@
+import SwiftData
 import SwiftUI
 
 struct SignupView: View {
@@ -9,8 +10,10 @@ struct SignupView: View {
 
     @State private var errorMessage = ""
 
-    
+    @Environment(\.modelContext) private var modelContext
     @Environment(\.dismiss) private var dismiss
+    @Query private var users: [User]
+    
     private var backgroundGradient: LinearGradient {
         LinearGradient(
             colors: [Color.yellow.opacity(0.95), Color.orange.opacity(0.75), Color.yellow.opacity(0.35)],
@@ -129,17 +132,21 @@ struct SignupView: View {
                         else if password.isEmpty {
                             errorMessage = "Please Enter Your Password"
                         }
-                        else if AuthService.shared.emailExists(email){
+                        else if users.contains(where: { $0.email == email }) {
                             errorMessage = "Account already exists"
                         }
                         else {
 
                             errorMessage = ""
                             
-                            let user = User(name: fullName, email: email, password: password)
-                            AuthService.shared.register(user: user)
-                            print(AuthService.shared.getAllUsers())
-                            
+                            let user = User(
+                                fullName: fullName,
+                                email: email,
+                                password: password
+                            )
+
+                            modelContext.insert(user)
+
                             dismiss()
                             
                         }

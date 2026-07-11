@@ -1,3 +1,5 @@
+import SwiftData
+
 import SwiftUI
 
 struct LoginView: View {
@@ -6,6 +8,7 @@ struct LoginView: View {
     @State private var showPassword = false
     @State private var errorMessage = ""
     @State private var navigateToQuote = false
+    @Query private var users: [User]
 
     private var backgroundGradient: LinearGradient {
         LinearGradient(
@@ -94,11 +97,14 @@ struct LoginView: View {
                             errorMessage = "Please Enter a Valid Email"
                         } else if password.isEmpty {
                             errorMessage = "Please Enter Your Password"
-                        } else if AuthService.shared.login(email: email, password: password){
+                        } else if users.contains(where: {
+                            $0.email == email &&
+                            $0.password == password
+                        }) {
                             errorMessage = ""
                             navigateToQuote = true
                         }
-                        else{
+                        else {
                             errorMessage = "Invalid email or password"
                         }
                     } label: {

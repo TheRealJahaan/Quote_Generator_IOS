@@ -6,8 +6,21 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		50367E552FFF8B240042DC0B /* QuoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F0E1A72FFED3B6002BB69B /* QuoteView.swift */; };
+		50555DCF300001B800FF3C4D /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50555DCE300001B800FF3C4D /* SignupView.swift */; };
+		50555DD23000B3BC00FF3C4D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50555DD13000B3B900FF3C4D /* User.swift */; };
+		5095365D2FFF7074006B16DA /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509536592FFF7074006B16DA /* LoginView.swift */; };
+		50B66B8E300223D200D06CCB /* AdminView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B66B8D300223CD00D06CCB /* AdminView.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		50555DCE300001B800FF3C4D /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
+		50555DD13000B3B900FF3C4D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5094889C2FFE173300C2C86A /* Quote_Generator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quote_Generator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		509536592FFF7074006B16DA /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		50B66B8D300223CD00D06CCB /* AdminView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminView.swift; sourceTree = "<group>"; };
+		50F0E1A72FFED3B6002BB69B /* QuoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -32,6 +45,9 @@
 		509488932FFE173300C2C86A = {
 			isa = PBXGroup;
 			children = (
+				50F0E1A42FFED374002BB69B /* Resources */,
+				50F0E1A32FFED36C002BB69B /* Services */,
+				50F0E1A22FFED366002BB69B /* Models */,
 				5094889E2FFE173300C2C86A /* Quote_Generator */,
 				5094889D2FFE173300C2C86A /* Products */,
 			);
@@ -43,6 +59,40 @@
 				5094889C2FFE173300C2C86A /* Quote_Generator.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		50F0E1A12FFED357002BB69B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				50B66B8D300223CD00D06CCB /* AdminView.swift */,
+				50F0E1A72FFED3B6002BB69B /* QuoteView.swift */,
+				509536592FFF7074006B16DA /* LoginView.swift */,
+				50555DCE300001B800FF3C4D /* SignupView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		50F0E1A22FFED366002BB69B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				50555DD13000B3B900FF3C4D /* User.swift */,
+				50F0E1A12FFED357002BB69B /* Views */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		50F0E1A32FFED36C002BB69B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		50F0E1A42FFED374002BB69B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,6 +169,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5095365D2FFF7074006B16DA /* LoginView.swift in Sources */,
+				50B66B8E300223D200D06CCB /* AdminView.swift in Sources */,
+				50555DD23000B3BC00FF3C4D /* User.swift in Sources */,
+				50367E552FFF8B240042DC0B /* QuoteView.swift in Sources */,
+				50555DCF300001B800FF3C4D /* SignupView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +311,7 @@
 				DEVELOPMENT_TEAM = R3V73F6N7J;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Inspire Me";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -288,6 +344,7 @@
 				DEVELOPMENT_TEAM = R3V73F6N7J;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Inspire Me";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

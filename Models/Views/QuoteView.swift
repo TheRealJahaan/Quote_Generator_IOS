@@ -4,7 +4,7 @@
 //
 //  Created by Jahaan Suthar on 7/8/26.
 //
-
+import SwiftData
 import SwiftUI
 
 struct QuoteView: View {
@@ -61,6 +61,16 @@ struct QuoteView: View {
                 . tint(.green)
                 .buttonStyle(.borderedProminent)
                 
+                NavigationLink {
+
+                    AdminView()
+
+                } label: {
+
+                    Label("View Database", systemImage: "externaldrive")
+
+                }
+                .padding(.top, 20)
             }
             
             .padding()
