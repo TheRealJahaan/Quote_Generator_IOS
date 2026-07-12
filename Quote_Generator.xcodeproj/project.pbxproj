@@ -10,6 +10,7 @@
 		500AF7823003DB890086C7CA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 500AF7813003DB890086C7CA /* GoogleService-Info.plist */; };
 		500AF7863003E3AE0086C7CA /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 500AF7853003E3AE0086C7CA /* FirebaseCore */; };
 		500AF7883003E71A0086C7CA /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 500AF7873003E71A0086C7CA /* FirebaseAuth */; };
+		500AF78A3003FDB00086C7CA /* FirebaseAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500AF7893003E9D00086C7CA /* FirebaseAuthService.swift */; };
 		50367E552FFF8B240042DC0B /* QuoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F0E1A72FFED3B6002BB69B /* QuoteView.swift */; };
 		50555DCF300001B800FF3C4D /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50555DCE300001B800FF3C4D /* SignupView.swift */; };
 		50555DD23000B3BC00FF3C4D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50555DD13000B3B900FF3C4D /* User.swift */; };
@@ -192,6 +193,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				500AF78A3003FDB00086C7CA /* FirebaseAuthService.swift in Sources */,
 				5095365D2FFF7074006B16DA /* LoginView.swift in Sources */,
 				50B66B8E300223D200D06CCB /* AdminView.swift in Sources */,
 				50555DD23000B3BC00FF3C4D /* User.swift in Sources */,
