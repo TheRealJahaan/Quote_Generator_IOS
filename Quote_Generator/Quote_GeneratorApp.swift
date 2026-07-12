@@ -7,10 +7,15 @@
 
 import SwiftUI
 import SwiftData
-
+import FirebaseCore
+import FirebaseAuth
 
 @main
 struct Quote_GeneratorApp: App {
+    
+    init(){
+        FirebaseApp.configure()
+    }
     var body: some Scene {
         WindowGroup {
             LoginView()
