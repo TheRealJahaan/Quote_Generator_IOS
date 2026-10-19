@@ -1,0 +1,45 @@
+// Public, well-attributed quotes bundled with the app.
+// Used for the quote of the day and whenever the network is unavailable.
+
+public enum BundledQuotes {
+    public static let all: [Quote] = [
+        Quote(id: "bundled-01", text: "The best way to predict the future is to invent it.", author: "Alan Kay"),
+        Quote(id: "bundled-02", text: "Talk is cheap. Show me the code.", author: "Linus Torvalds"),
+        Quote(id: "bundled-03", text: "Programs must be written for people to read, and only incidentally for machines to execute.", author: "Harold Abelson"),
+        Quote(id: "bundled-04", text: "Premature optimization is the root of all evil.", author: "Donald Knuth"),
+        Quote(id: "bundled-05", text: "Any fool can write code that a computer can understand. Good programmers write code that humans can understand.", author: "Martin Fowler"),
+        Quote(id: "bundled-06", text: "Make it work, make it right, make it fast.", author: "Kent Beck"),
+        Quote(id: "bundled-07", text: "Simplicity is prerequisite for reliability.", author: "Edsger W. Dijkstra"),
+        Quote(id: "bundled-08", text: "The most damaging phrase in the language is: it's always been done that way.", author: "Grace Hopper"),
+        Quote(id: "bundled-09", text: "Real artists ship.", author: "Steve Jobs"),
+        Quote(id: "bundled-10", text: "The only way to do great work is to love what you do.", author: "Steve Jobs"),
+        Quote(id: "bundled-11", text: "Stay hungry. Stay foolish.", author: "Stewart Brand"),
+        Quote(id: "bundled-12", text: "Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away.", author: "Antoine de Saint-Exupéry"),
+        Quote(id: "bundled-13", text: "Imagination is more important than knowledge.", author: "Albert Einstein"),
+        Quote(id: "bundled-14", text: "The unexamined life is not worth living.", author: "Socrates"),
+        Quote(id: "bundled-15", text: "We are what we repeatedly do. Excellence, then, is not an act, but a habit.", author: "Will Durant"),
+        Quote(id: "bundled-16", text: "The journey of a thousand miles begins with one step.", author: "Lao Tzu"),
+        Quote(id: "bundled-17", text: "Well done is better than well said.", author: "Benjamin Franklin"),
+        Quote(id: "bundled-18", text: "Energy and persistence conquer all things.", author: "Benjamin Franklin"),
+        Quote(id: "bundled-19", text: "Hope is a good breakfast, but it is a bad supper.", author: "Francis Bacon"),
+        Quote(id: "bundled-20", text: "Nothing in life is to be feared, it is only to be understood.", author: "Marie Curie"),
+        Quote(id: "bundled-21", text: "Life is what happens when you're busy making other plans.", author: "John Lennon"),
+        Quote(id: "bundled-22", text: "You miss 100% of the shots you don't take.", author: "Wayne Gretzky"),
+        Quote(id: "bundled-23", text: "Act as if what you do makes a difference. It does.", author: "William James"),
+        Quote(id: "bundled-24", text: "Do or do not. There is no try.", author: "Yoda"),
+        Quote(id: "bundled-25", text: "Fall seven times, stand up eight.", author: "Japanese proverb"),
+        Quote(id: "bundled-26", text: "The best time to plant a tree was 20 years ago. The second best time is now.", author: "Chinese proverb"),
+        Quote(id: "bundled-27", text: "Done is better than perfect.", author: "Sheryl Sandberg"),
+        Quote(id: "bundled-28", text: "Discipline is the bridge between goals and accomplishment.", author: "Jim Rohn"),
+        Quote(id: "bundled-29", text: "Dream big. Start small. Act now.", author: "Robin Sharma"),
+        Quote(id: "bundled-30", text: "Every day brings new choices.", author: "Martha Beck"),
+        Quote(id: "bundled-31", text: "The secret of your success is determined by your daily agenda.", author: "John C. Maxwell"),
+        Quote(id: "bundled-32", text: "Every day is a new opportunity. You can build on yesterday's success or put its failures behind and start over again.", author: "Bob Feller"),
+        Quote(id: "bundled-33", text: "In every day, there are 1,440 minutes. That means we have 1,440 daily opportunities to make a positive impact.", author: "Les Brown"),
+        Quote(id: "bundled-34", text: "Whether you think you can, or you think you can't, you're right.", author: "Henry Ford"),
+        Quote(id: "bundled-35", text: "I have not failed. I've just found 10,000 ways that won't work.", author: "Thomas Edison"),
+        Quote(id: "bundled-36", text: "That which does not kill us makes us stronger.", author: "Friedrich Nietzsche"),
+        Quote(id: "bundled-39", text: "First, solve the problem. Then, write the code.", author: "John Johnson"),
+        Quote(id: "bundled-40", text: "Code is like humor. When you have to explain it, it's bad.", author: "Cory House")
+    ]
+}
