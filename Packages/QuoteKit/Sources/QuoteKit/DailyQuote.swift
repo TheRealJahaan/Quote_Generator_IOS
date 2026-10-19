@@ -14,7 +14,10 @@ public enum DailyQuote {
 
     static func index(for date: Date, calendar: Calendar, count: Int) -> Int {
         let parts = calendar.dateComponents([.year, .month, .day], from: date)
-        let dayKey = UInt64((parts.year ?? 0) * 10_000 + (parts.month ?? 0) * 100 + (parts.day ?? 0))
+        let year: Int = parts.year ?? 0
+        let month: Int = parts.month ?? 0
+        let day: Int = parts.day ?? 0
+        let dayKey = UInt64(year * 10_000 + month * 100 + day)
         return Int(splitMix64(dayKey) % UInt64(count))
     }
 

@@ -84,6 +84,6 @@ Export compliance is pre-answered (`ITSAppUsesNonExemptEncryption = NO`), the ap
 
 SwiftUI · Observation (`@Observable`) · SwiftData · Swift Concurrency · Firebase Authentication · Swift Package Manager · XCTest · GitHub Actions
 
-## License
+## Credits
 
 Quotes are attributed to their authors. Remote quotes are provided by DummyJSON.
