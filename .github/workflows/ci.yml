@@ -1,0 +1,42 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  quotekit-linux:
+    name: QuoteKit tests (Linux)
+    runs-on: ubuntu-latest
+    container: swift:6.1
+    steps:
+      - uses: actions/checkout@v5
+      - name: Run unit tests
+        run: swift test --package-path Packages/QuoteKit
+
+  ios:
+    name: QuoteKit tests + iOS build (macOS)
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Select the newest Xcode
+        run: |
+          XCODE=$(ls -d /Applications/Xcode*.app | sort -V | tail -n 1)
+          echo "Using $XCODE"
+          sudo xcode-select -s "$XCODE"
+          xcodebuild -version
+      - name: Run unit tests
+        run: swift test --package-path Packages/QuoteKit
+      - name: Build the app for the iOS Simulator
+        run: |
+          xcodebuild build -quiet \
+            -project Quote_Generator.xcodeproj \
+            -scheme Quote_Generator \
+            -destination 'generic/platform=iOS Simulator' \
+            -skipPackagePluginValidation \
+            CODE_SIGNING_ALLOWED=NO

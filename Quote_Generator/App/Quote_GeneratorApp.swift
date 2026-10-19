@@ -8,19 +8,22 @@
 import SwiftUI
 import SwiftData
 import FirebaseCore
-import FirebaseAuth
+import QuoteKit
 
 @main
 struct Quote_GeneratorApp: App {
-    
-    init(){
+    @State private var session: SessionModel
+
+    init() {
         FirebaseApp.configure()
+        _session = State(initialValue: SessionModel(auth: FirebaseAuthService()))
     }
+
     var body: some Scene {
         WindowGroup {
-            LoginView()
+            RootView()
+                .environment(session)
         }
-        .modelContainer(for: User.self)
+        .modelContainer(for: FavoriteQuote.self)
     }
-    
 }
