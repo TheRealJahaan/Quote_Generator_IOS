@@ -25,8 +25,7 @@ struct FailingProvider: QuoteProviding {
 }
 
 /// Hands out a fixed sequence of quotes, then repeats the last one.
-final class SequenceProvider: QuoteProviding, @unchecked Sendable {
-    private let lock = NSLock()
+actor SequenceProvider: QuoteProviding {
     private var quotes: [Quote]
 
     init(_ quotes: [Quote]) {
@@ -34,9 +33,7 @@ final class SequenceProvider: QuoteProviding, @unchecked Sendable {
     }
 
     func randomQuote() async throws -> Quote {
-        lock.lock()
-        defer { lock.unlock() }
-        return quotes.count > 1 ? quotes.removeFirst() : quotes[0]
+        quotes.count > 1 ? quotes.removeFirst() : quotes[0]
     }
 }
 
